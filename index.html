@@ -1,0 +1,545 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="description" content="Trucos de Progarmación de Odoo 10.0">
+<meta name="HandheldFriendly" content="True">
+<meta name="MobileOptimized" content="320">
+<meta name="viewport" content="initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<title>TRUKOS-ODOO</title>
+<link rel="shortcut icon" href="favicon.png">
+<link rel="alternate" type="application/rss+xml" title="frittt.com" href="feed/index.html">
+<link rel="stylesheet" href="css/style.css">
+<meta name="google-site-verification" content="6SJfppWH73AwMKg9GAzWM4Htzr0i60eHL0H3PAvv7cw" />
+ 
+<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.9.0/styles/default.min.css">
+<link rel="stylesheet" href="css/dracula.css">
+<script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.9.0/highlight.min.js"></script> 
+<script>hljs.initHighlightingOnLoad();</script>
+
+<!--Start of Zendesk Chat Script-->
+<script type="text/javascript">
+window.$zopim||(function(d,s){var z=$zopim=function(c){z._.push(c)},$=z.s=
+d.createElement(s),e=d.getElementsByTagName(s)[0];z.set=function(o){z.set.
+_.push(o)};z._=[];z.set._=[];$.async=!0;$.setAttribute("charset","utf-8");
+$.src="https://v2.zopim.com/?5ovGR8CLlVmIyVhkXGm3upeCBSyUlqHE";z.t=+new Date;$.
+type="text/javascript";e.parentNode.insertBefore($,e)})(document,"script");
+</script>
+<!--End of Zendesk Chat Script-->
+	
+	
+	
+<!--Start of Tawk.to Script-->
+<script type="text/javascript">
+var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
+(function(){
+var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
+s1.async=true;
+s1.src='https://embed.tawk.to/6325c5e354f06e12d8954465/1gd5oq10m';
+s1.charset='UTF-8';
+s1.setAttribute('crossorigin','*');
+s0.parentNode.insertBefore(s1,s0);
+})();
+</script>
+<!--End of Tawk.to Script-->
+	
+	
+	
+<script type='text/javascript'>
+//some default pre init
+var Countly = Countly || {};
+Countly.q = Countly.q || [];
+
+//provide countly initialization parameters
+Countly.app_key = '3e31d93c47761a6f10db71dc5af9630c1eea9fb0';
+Countly.url = 'https://countly.pyerp.co';
+
+Countly.q.push(['track_sessions']);
+Countly.q.push(['track_pageview']);
+Countly.q.push(['track_clicks']);
+Countly.q.push(['track_scrolls']);
+Countly.q.push(['track_errors']);
+Countly.q.push(['track_links']);
+Countly.q.push(['track_forms']);
+Countly.q.push(['collect_from_forms']);
+
+//load countly script asynchronously
+(function() {
+   var cly = document.createElement('script'); cly.type = 'text/javascript';
+   cly.async = true;
+   //enter url of script here
+   cly.src = 'https://countly.pyerp.co/sdk/web/countly.min.js';
+   cly.onload = function(){Countly.init()};
+   var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(cly, s);
+})();
+</script>
+ 
+ 
+</head>
+ 
+<body>
+
+
+<div class="wrapper">
+<nav>
+ 
+  	<div class="pull-left">
+    	<h1><a href="http://www.marlonfalcon.com" target="_blank"><img class="w" src="img/w.png" alt="Free Documentation Template Icon" /> <span>+34662470645</span></a></h1>
+    </div>
+
+
+  
+    
+
+</nav>
+
+
+<style>
+	.w{
+        height: 30px;
+        width: 30px; 
+	}
+
+</style>
+
+
+
+<header>
+  <div class="container">
+    <h2 class="lone-header">Guía de Programación de Odoo 10.0 </h2>
+  </div>
+</header>
+<section>
+  <div class="container">
+    <ul class="docs-nav">
+      <li><strong>1 Introducción</strong></li>
+      <li><a href="#odoo1" class="cc-active">1.1 ¿Qué es Odoo?</a></li>
+      <li><a href="#odoo2" class="cc-active">1.2 GitHub para Odoo</a></li>
+
+      <li class="separator"></li>
+      <li><strong>2 Programación en Python</strong></li>
+      <li><a href="#var1" class="cc-active">2.1 Variables</a></li>
+      <li><a href="#var2" class="cc-active">2.2 Funciones</a></li>
+      <li><a href="#var3" class="cc-active">2.3 Clases</a></li>
+
+
+
+      <li class="separator"></li>
+      <li><strong>3 Programación en Odoo</strong></li>
+      <li><a href="#odop1" class="cc-active">3.1 Crear un módulo</a></li>      
+      <li><a href="#odop3" class="cc-active">3.2 Tipos de datos en Odoo</a></li>
+
+
+      <li class="separator"></li>
+      <li><strong>4 Configuración Odoo</strong></li>
+      <li><a href="#conf1" class="cc-active">4.1 Respaldo BD</a></li>
+      <li><a href="#conf2" class="cc-active">4.2 Password por defecto</a></li>
+      <li><a href="#conf3" class="cc-active">4.3 Instalando en Ubuntu</a></li>
+      <li><a href="#conf4" class="cc-active">4.4 Procesos Windows</a></li>
+      <li><a href="#conf5" class="cc-active">4.5 Clonando de GitHub</a></li>
+      <li><a href="#conf6" class="cc-active">4.6 Carpeta de Modulos ext</a></li>
+      <li><a href="#conf7" class="cc-active">4.7 Procesos Ubuntu</a></li>
+      <li><a href="#conf8" class="cc-active">4.8 Odoo - wkhtmltopdf</a></li>
+     
+     
+      <li class="separator"></li>
+      <li><strong>5 Estructura de un Módulo</strong></li>
+      <li><a href="#est1" class="cc-active">5.1 Plantilla de un módulo</a></li>
+      <li><a href="#est2" class="cc-active">5.2 Modelos - Variables </a></li>
+
+     
+      <li class="separator"></li>
+      <li><strong>6 links</strong></li>
+      <li><a href="#link1" class="cc-active">6.1 Links de Interés</a></li>
+
+      <li class="separator"></li>
+      <li><strong>7 Módulos Interesantes</strong></li>
+      <li><a href="#oca1" class="cc-active">7.1 Módulos OCA</a></li>
+
+
+
+    </ul>
+    <div class="docs-content">
+    
+      <h3 id="odoo1">1.1 ¿Qué es Odoo?</h3>      
+      <p> <strong>Odoo ERP</strong> es un software libre que puede ser instalado en la nube y se puede unir con una app para que desde tu celular puedas interactuar con el, tiene varios módulos muy interesantes para la administración de las empresas. Se conocía anteriormente como OpenERP, que es un sistema de ERP integrado de código abierto actualmente producido por la empresa belga Odoo S.A. El fabricante declara su producto como una alternativa de código abierto a SAP ERP y Microsoft Dynamics.
+      <p> Odoo usa una arquitectura cliente servidor donde los clientes se conectan usando un navegador via RPC. Generalmente, la lógica y la extensión de negocio se realizan en el lado del servidor. <p> 
+      <p> Entre sus principales módulos podemos señalar:</p>
+     <ul>
+        <li>CRM Customer relationship management</li>
+        <li>Módulo de Ventas</li>
+        <li>Módulo de Contabilidad</li>
+        <li>Módulo de Compras</li>
+      </ul>
+
+
+
+      <h3 id="odoo2">1.2 GitHub para Odoo</h3>      
+      <p> Lo Básico que tenemos que conocer de GitHub y Linux para Odoo <p> 
+       <pre>
+          <code class="python">
+          ## Instalamos git ###
+          sudo apt install git
+
+          # Instalamos un módulo
+          git clone https://github.com/odoochile/Odoo-Chile
+
+          ## Reiniciamos Odoo ##
+          service odoo restart
+
+          ## Actualizar tu directorio local ##
+          git pull
+
+          # Borramos un directorio con ficheros
+          rm -Rf Odoo-Chile
+          </code>
+        </pre>
+
+      <!-- ####################################  -->
+
+      <h3 id="var1">2.1 Variables en Python</h3>      
+      <p> En Phyton las variable puede declararse de cualquier tipo y pueden cambiar su tipo en el programa.</p>
+       <pre>
+          <code class="python">
+          # una cadena
+          c = "Hola Marlon"
+          # y esto es un entero
+          e = 45
+          # podemos comprobarlo con la función type
+          type(c)
+          type(e)
+          </code>
+        </pre>
+
+      <h3 id="var2">2.2 Funciones</h3>      
+      <p>Phyton permite crear funciones muy fácilmente usando la siguiente sintaxis</p>
+       <pre>
+          <code class="python">
+          def funcion(): 
+              return "Hola Mundo" 
+              f = funcion() 
+              print f
+          </code>
+        </pre>
+
+
+    <h3 id="var3">2.3 Clases</h3>      
+      <p>Phyton permite crear clases muy fácilmente usando la siguiente sintaxis</p>
+       <pre>
+          <code class="python">
+      class Complejo:
+          def __init__(self, partereal, parteimaginaria):
+          self.r = partereal
+          self.i = parteimaginaria
+
+       x = Complejo(3.0, -4.5)
+       x.r, x.i
+       (3.0, -4.5)
+          </code>
+        </pre>
+
+
+      <!-- ####################################  -->
+
+      <h3 id="odop1">3.1 Crear un módulo</h3>      
+      <p>Odoo cuenta con una herramienta que te permite crear módulos completos para empezar a programar.</p>
+          <pre>
+          <code class="python">  
+          # 1- Nos colocamos en la carpeta Odoo 10.0\server
+          # cd C:\Program Files (x86)\Odoo 10.0\server
+          # 2- Ejecutamos el siguiente comando
+          # $ odoo-bin scaffold [module name] [where to put it]
+          odoo-bin scaffold nombremodulo odoo/addons
+          </code>
+      </pre>
+     
+     
+     
+     
+ <h3 id="odop3">3.2 ORM - Tipos de datos en Odoo</h3>      
+  <p>Tipos de datos.</p>
+      <pre>
+        <code class="python">   
+         string -- Cadenas
+         help - tooltip de ayuda
+         readonly - Si el campo es solo lectura.
+         required -- Si el campo es requerido
+         index -- Cuando el campo puede ser indexado en la base de dato
+         default --  Valor por defecto de un campo
+         states -- Un diccionario
+         groups -- Listas
+         copy (bool) -- Cuando un campo es copiado
+         oldname (string) -- El nombre anterior
+     </code>
+    </pre>
+
+     
+     
+ 
+     
+     
+      <!-- ####################################  --> 
+
+      <h3 id="conf1">4.1 Respaldo Base de Datos</h3>      
+      <p>Para crear un respaldo de la base de datos utilizaremos el siguiente comando.</p>
+ <pre>
+    <code class="python"> 
+          http://localhost:8069/web/database/manager
+    </code>
+ </pre>
+
+     
+     
+     
+
+      <h3 id="conf2">4.2 Password por defecto</h3>      
+      <p>Contraseñas por defecto.</p>
+    <pre>
+    <code class="python"> 
+          Port: 5432
+          Username:openpg
+          Password:openpgpwd
+   </code>
+ </pre>
+
+      <h3 id="conf3">4.3 Instalando Odoo en Ubuntu</h3>      
+      <p>Lo puede hacer desde el siguiente sitio: <a href="https://nightly.odoo.com/">nightly.odoo.com</a></p>
+  <pre>
+    <code class="python"> 
+          wget -O - https://nightly.odoo.com/odoo.key | apt-key add -
+          echo "deb http://nightly.odoo.com/10.0/nightly/deb/ ./" >> /etc/apt/sources.list
+          apt-get update && apt-get install odoo
+     </code>
+ </pre>
+     
+     
+     
+
+      <h3 id="conf4">4.4 Procesos Odoo en Windows</h3>      
+      <p>Si queremos saber si tenemos un error tenemos que ver el archivo odoo.log que cambia en tiempo real</p>
+ <pre>
+    <code class="python"> 
+          # Instalamos Windows Server 2003 Resource Kit Tools
+          https://www.microsoft.com/en-us/download/confirmation.aspx?id=17657
+
+
+          # Nos colocamos en la carpeta de la app
+          C:\Program Files (x86)\Windows Resource Kits\Tools
+
+
+          # Ejecutamos en el CMD el siguiente comando
+          tail.exe -f "C:\Program Files (x86)\Odoo 9.0-20160521\server\odoo.log"
+  </code>
+ </pre>
+     
+     
+     
+     
+     <h3 id="conf5">4.5 Clonando un módulo de GitHub</h3>      
+      <p>Si queremos clonar un módulo de odoo desde Github usamos los siguientes comandos</p>
+<pre>
+    <code class="python"> 
+          ## Instalamos git ###
+          sudo apt install git
+          
+          ## nos colocamos sobre la carpeta de modulos ###
+          cd /usr/lib/python2.7/dist-packages/openerp/addons
+
+          ## Instalamos el primer modulo ##
+          git clone -b 9.0 https://github.com/dansanti/l10n_cl_vat
+          sudo service odoo restart
+    </code>
+ </pre>
+     
+     
+     <h3 id="conf6">4.6 Carpeta de módulos externos</h3>      
+      <p>En Odoo es recomendable instalar los módulo que no son oficiales en otra carpeta para ello seguiremos los siguientes pasos</p>
+<pre>
+    <code class="python">       
+          ## 0- Los módulos estandar de Odoo 10.0 estan en la siguiente dirección ##
+          cd /usr/lib/python2.7/dist-packages/odoo/addons
+  
+          ## 1- Nos conectamos con permiso de administrador ##
+          sudo su
+
+          ## 2- Damos permiso de escritura a la carpeta de odoo ###
+          chmod 777 -R  /var/lib/odoo/
+
+          ## 3- Entramos en la carpeta que colocaremos los módulos ###
+          cd /var/lib/odoo/.local/share/Odoo/addons/10.0
+
+          ## 4- Instalamos git ###
+          sudo apt install git
+
+          ## 5- Clonamos el repositorio con el módulo que nos interese ###
+          git clone https://github.com/odoochile/Odoo-Chile
+
+          ## 6 - Adicionamos la carpeta al archivo de configuración de Odoo ##
+          cd /etc/odoo
+          nano odoo.conf
+          addons_path = /usr/lib/python2.7/dist-packages/openerp/addons, /var/lib/odoo/.local/share/Odoo/addons/10.0/Odoo-Chile
+          Crtl + X
+          Enter
+
+          ## 7 - Reiniciamos odoo ##
+          service odoo restart
+    </code>
+ </pre>
+
+
+
+  <h3 id="conf7">4.7 Procesos Odoo en Linux (Ubuntu)</h3>      
+      <p>Si queremos saber si tenemos un error tenemos que ver el archivo odoo.log que cambia en tiempo real</p>
+ <pre>
+    <code class="python"> 
+          # Entramos a la carpeta
+          cd /var/log/odoo
+
+          # Mostramos el server.log
+          nano odoo-server.log
+
+          # Si lo queremos limpiar
+          rm odoo-server.log
+  </code>
+ </pre>
+
+
+<h3 id="conf8">4.8 Instalando la libreria <strong>wkhtmltopdf</strong> para ver PDF</h3>      
+      <p>Cuando instalamos la versión 10.0 en linux necesitamos instalar la libreria <strong>wkhtmltopdf</strong> que nos permitirá leer los PDF </p>
+ <pre>
+    <code class="python"> 
+          # Ejecutamos los siguientes comandos
+          wget http://download.gna.org/wkhtmltopdf/0.12/0.12.1/wkhtmltox-0.12.1_linux-trusty-amd64.deb
+          sudo dpkg -i wkhtmltox-0.12.1_linux-trusty-amd64.debz
+
+          # Reiniciamos Odoo
+          service odoo restart
+  </code>
+ </pre>
+
+    
+    
+      <!-- ####################################  -->
+
+
+
+<h3 id="est1">5.1 Plantilla de un módulo</h3>      
+   <p>__init__.py</p>
+    <pre>
+        <code class="python">   
+         # -*- coding: utf-8 -*-
+         # Part of Odoo. See LICENSE file for full copyright and licensing details.
+         from . import models
+  </code>
+ </pre>
+   
+            
+  <p>__manifest__.py</p>
+    <pre>
+    <code class="python"> 
+# -*- coding: utf-8 -*-
+# Part of Odoo. See LICENSE file for full copyright and licensing details.
+# Copyright (c) 2016 FALCON SOLUTIONS - Marlon Falcón
+{
+    'name': "Modulo RUC - 123ERP",
+    'version': '1.0',
+    'description': """
+Paraguay RUC
+==============================================
+Configuracion del campo RUC
+    """,
+    'author': 'FALCON SOLUTIONS - Marlon Falcón',
+    'website': "www.falconsolutions.cl",
+    'category': 'Localization',
+    'depends': ['sale'],
+    'data': [
+         'views/partner.xml',
+    ],
+}
+      </code>
+ </pre>      
+
+
+            
+  <p>models/partner.py</p>
+    <pre>
+    <code class="python"> 
+# -*- coding: utf-8 -*-
+# Part of Odoo. See LICENSE file for full copyright and licensing details.
+# Copyright (c) 2016 FALCON SOLUTIONS - Marlon Falcón
+
+from odoo import fields, models
+
+ class Partner(models.Model):
+    _inherit = 'res.partner'
+
+    # Add a new column to the res.partner model, by default partners are not
+    rut = fields.Char(string="RUT")
+      </code>
+ </pre>  
+
+
+<h3 id="est2">5.2 Modelos - Variables</h3>      
+   <p>__init__.py</p>
+    <pre>
+        <code class="python">   
+        nombre = fields.char('Nombre', size=80, required=True, help='Aqui pones el nombre')
+        fecha_nacimiento = fields.date('Fecha de nacimiento', help='Fecha de Nacimiento')
+        cedula = fields.integer('Cedula', size=10, required=True, help='Aqui pones la cedula')
+        direccion =  fields.text('Direccion', help='Direccion')
+       </code>
+ </pre>
+
+
+
+
+      <h3 id="link1">Links de Interés</h3>
+      <ul>    
+         <li><a href="https://www.odoo.com/documentation/10.0/">https://www.odoo.com/documentation/10.0/</a></li>
+	 <li><a href="http://fundamentos-de-desarrollo-en-odoo.readthedocs.io/es/latest/capitulos/comenzando-con-odoo.html">fundamentos-de-desarrollo-en-odoo
+        </a> 
+	 <li><a href="https://demo2.odoo.com">demo2.odoo.com</a></li>
+	      
+	      
+	      </li>
+	      
+	      
+      </ul>
+
+
+      <h3 id="oca1">7.1 Módulos OCA</h3>
+      <ul>    
+         
+      </ul>
+
+
+
+
+    
+    </div>
+  </div>
+</section>
+<section class="vibrant centered">
+  <div class="">
+    <h4> Esta documentación es desarrollada gracias a la colaboración de diferentes fuentes en la web, favor cualquier error reportarlo al mi repositorio <a href="https://github.com/falconsoft3d/Trukos-odoo-10/" target="_blank">Trukos-odoo-10</a>. Si te gusto compártelo</h4>
+  </div>
+</section>
+<footer>
+  <div class="">
+    <p> &copy; Copyright Marlon Falcón Hernández. <a href="mailto:mfalconsoft@gmail.com">mailto:mfalconsoft@gmail.com</a></p>
+  </div>
+</footer>
+</div>
+ 
+<script src="js/jquery.min.js"></script> 
+<script src="https://google-code-prettify.googlecode.com/svn/loader/run_prettify.js?lang=css&skin=sunburst"></script>
+<script src="js/layout.js"></script>
+<script>
+ $(document).ready(function() {
+  $('pre code').each(function(i, block) {
+    hljs.highlightBlock(block);
+  });
+});
+</script> 
+ </body>
+</html>
