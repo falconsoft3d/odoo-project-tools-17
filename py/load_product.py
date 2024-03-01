@@ -8,11 +8,11 @@ from io import BytesIO
 import xlrd
 
 # Servidor Demo
-demo_host = 'creekside.bim20.com'
+demo_host = '127.0.0.1'
 demo_port = 8069
-demo_db = 'db16-mexico'
+demo_db = 'db16-spain'
 demo_user = 'admin'
-demo_password = 'asas7778884443xddSSdd'
+demo_password = 'x1234567890'
 
 
 demo_url = 'http://%s:%d/xmlrpc/2/' % (demo_host, demo_port)
